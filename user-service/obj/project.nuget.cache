@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yDIq2VmPr3cMAnPr+NVE+YBiHxP+VZna98cKcEEKm8DUyKVZQPrxZxm8QGpANpkFlGIdCZGgk2JSb+9rE2wr0Q==",
+  "dgSpecHash": "TX6na1cZSKMOyjZpgLa1aQrMGmGGPIKswmIif/S9e12KZAp+cVGq23L56u1EvZCbqqZJhBRPJMZ0aTnKEePQ7g==",
   "success": true,
   "projectFilePath": "/Users/julioandre/RiderProjects/user-service/user-service/user-service.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.5/microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.5/microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/7.0.5/microsoft.aspnetcore.identity.entityframeworkcore.7.0.5.nupkg.sha512",
+    "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.identity.ui/7.0.5/microsoft.aspnetcore.identity.ui.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.openapi/7.0.5/microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.11/microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
@@ -56,6 +57,8 @@
     "/Users/julioandre/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0-preview.3.23174.8/microsoft.extensions.dependencyinjection.8.0.0-preview.3.23174.8.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0-preview.3.23174.8/microsoft.extensions.dependencyinjection.abstractions.8.0.0-preview.3.23174.8.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.extensions.dependencymodel/8.0.0-preview.3.23174.8/microsoft.extensions.dependencymodel.8.0.0-preview.3.23174.8.nupkg.sha512",
+    "/Users/julioandre/.nuget/packages/microsoft.extensions.fileproviders.abstractions/7.0.0/microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "/Users/julioandre/.nuget/packages/microsoft.extensions.fileproviders.embedded/7.0.5/microsoft.extensions.fileproviders.embedded.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.extensions.identity.core/7.0.5/microsoft.extensions.identity.core.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.extensions.identity.stores/7.0.5/microsoft.extensions.identity.stores.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.extensions.logging/8.0.0-preview.3.23174.8/microsoft.extensions.logging.8.0.0-preview.3.23174.8.nupkg.sha512",
