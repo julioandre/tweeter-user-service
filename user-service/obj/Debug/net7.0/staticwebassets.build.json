@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "pP56qYpAgM0bVs/z9euGC4mtO52qE07obP8OE3WT5Vg=",
+  "Hash": "T5s8PV/altYzVqqzoXYJRw4XA19MQ/gBJLRg6DBXy7A=",
   "Source": "user-service",
   "BasePath": "_content/user-service",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "user-service/wwwroot",
+      "Source": "user-service",
+      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "BasePath": "_content/user-service",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
