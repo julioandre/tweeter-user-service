@@ -6,15 +6,7 @@
       <synchronize>true</synchronize>
       <imported>true</imported>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://julioandre.database.windows.net:1433</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="Azure SQL Database - julioandre - users" uuid="d7f9af37-4288-4989-b908-8729589f85ba">
-      <driver-ref>sqlserver.jb</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
-      <jdbc-url>Server=julioandre.database.windows.net,1433;Database=users</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://julioandre.database.windows.net:1433;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
