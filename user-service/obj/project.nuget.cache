@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tXsoG2PUVuK7Q5Hfj0UhHQS72CsWHY6FwjpC3mPjjq1h/OdesUQwOAy9a6E9bXblA2Rdt7As6HwTGdjJbIaXvA==",
+  "dgSpecHash": "rX4g0I0T9XcYJcZSmSYdVTfnEP3lzZx6Sbqz3RqM6T+uUd6RRkkBLHf+Nz/uUq6CazlxRZdfAAqCE69xvcCqgQ==",
   "success": true,
-  "projectFilePath": "/Users/julioandre/RiderProjects/user-service/user-service/user-service.csproj",
+  "projectFilePath": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/user-service.csproj",
   "expectedPackageFiles": [
     "/Users/julioandre/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",

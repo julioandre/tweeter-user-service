@@ -11093,11 +11093,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/julioandre/RiderProjects/user-service/user-service/user-service.csproj",
+      "projectUniqueName": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/user-service.csproj",
       "projectName": "user-service",
-      "projectPath": "/Users/julioandre/RiderProjects/user-service/user-service/user-service.csproj",
+      "projectPath": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/user-service.csproj",
       "packagesPath": "/Users/julioandre/.nuget/packages/",
-      "outputPath": "/Users/julioandre/RiderProjects/user-service/user-service/obj/",
+      "outputPath": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/julioandre/.nuget/NuGet/NuGet.Config"
