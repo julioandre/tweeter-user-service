@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using user_service.Data;
 using user_service.Models;
+using user_service.SyncDataServices.Http;
 
 namespace user_service.Controllers
 {
@@ -15,16 +16,26 @@ namespace user_service.Controllers
     public class userServiceController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly ICommandDataClient _commandDataClient;
 
-        public userServiceController(ApplicationDbContext context)
+        public userServiceController(ApplicationDbContext context, ICommandDataClient commandDataClient)
         {
             _context = context;
+            _commandDataClient = commandDataClient;
         }
 
         // GET: api/userService
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserEntity>>> GetUsers()
         {
+            try
+            {
+                await _commandDataClient.SendUserToFollow("Juser");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"--- Error: {ex.Message} ---");
+            }
             return await _context.Users.ToListAsync();
         }
 

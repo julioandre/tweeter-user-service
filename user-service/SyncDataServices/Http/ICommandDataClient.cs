@@ -5,5 +5,5 @@ namespace user_service.SyncDataServices.Http;
 
 public interface ICommandDataClient
 {
-    Task SendUserToFollow(UserDto userEntity);
+    Task SendUserToFollow(string userEntity);
 }

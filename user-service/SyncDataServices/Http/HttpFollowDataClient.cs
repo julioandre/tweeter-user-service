@@ -13,14 +13,14 @@ public class HttpFollowDataClient:ICommandDataClient
     {
         _httpClient = httpClient;
     }
-    public async Task SendUserToFollow(UserDto user)
+    public async Task SendUserToFollow(string user)
     {
         var httpContent = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8,"application/json");
         var response = await _httpClient.PostAsync("http://localhost:5269/api/follow/", httpContent);
 
         Console.WriteLine(response.IsSuccessStatusCode
-            ? $"User {user.FirstName} has been followed successfully!"
-            : $"User {user.FirstName} has not been followed successfully!");
+            ? $"User {user} has been followed successfully!"
+            : $"User {user} has not been followed successfully!");
     }
 
     
