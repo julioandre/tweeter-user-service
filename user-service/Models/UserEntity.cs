@@ -9,6 +9,6 @@ public class UserEntity:IdentityUser
     public string LastName { get; set; }
     
     public DateTime CreationDate { get; set; } = DateTime.Now;
-    public DateTime? LaginDate { get; set; } = DateTime.Now;
+    public DateTime? LoginDate { get; set; } = DateTime.Now;
    
 }
