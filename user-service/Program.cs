@@ -2,14 +2,14 @@ using Microsoft.EntityFrameworkCore;
 using user_service.Data;
 using Microsoft.AspNetCore.Identity;
 using user_service.Models;
-using user_service.SyncDataServices.Http;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddHttpClient<ICommandDataClient, HttpFollowDataClient>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("user-db-connection")));
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
