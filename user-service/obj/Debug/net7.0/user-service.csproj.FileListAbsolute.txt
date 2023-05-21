@@ -650,8 +650,6 @@
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/user-service.csproj.CoreCompileInputs.cache
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/user-service.MvcApplicationPartsAssemblyInfo.cs
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/user-service.MvcApplicationPartsAssemblyInfo.cache
-/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/user-service.RazorAssemblyInfo.cache
-/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/user-service.RazorAssemblyInfo.cs
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/staticwebassets/msbuild.user-service.Microsoft.AspNetCore.StaticWebAssets.props
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/staticwebassets/msbuild.build.user-service.props
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.user-service.props
@@ -666,3 +664,5 @@
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/user-service.pdb
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/user-service.genruntimeconfig.cache
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/ref/user-service.dll
+/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/AutoMapper.dll
+/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
