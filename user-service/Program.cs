@@ -19,9 +19,13 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
     options.ConsentCookieValue = "true";
     options.MinimumSameSitePolicy = SameSiteMode.None;
 });
+
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = "localhost:6379";
+    
+        options.Configuration = "localhost:6379";
+        options.InstanceName = "user-redis-cache";
+   
 });
 builder.Services.AddDefaultIdentity<UserEntity>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<ApplicationDbContext>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

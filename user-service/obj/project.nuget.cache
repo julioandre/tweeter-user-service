@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NmcvUmb68ApCm4UFf9bwwA/8EwqKFQfo3tXhjkVhlF2qwmg54SNs8XZA41EwbBg+lWCkChPgAq75sIuXCeBCKA==",
+  "dgSpecHash": "kjMBgUFSlu5Z5fSxgMVXfTEosjWjBqE4oqGdv9XJILmG+QhelqM+wn0/8tut0Q3q//fj3lzcxSFr5GP2om3Imw==",
   "success": true,
   "projectFilePath": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/user-service.csproj",
   "expectedPackageFiles": [
@@ -96,7 +96,7 @@
     "/Users/julioandre/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/netstandard.library/2.0.1/netstandard.library.2.0.1.nupkg.sha512",
-    "/Users/julioandre/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/julioandre/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/nuget.common/6.3.1/nuget.common.6.3.1.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/nuget.configuration/6.3.1/nuget.configuration.6.3.1.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/nuget.dependencyresolver.core/6.3.1/nuget.dependencyresolver.core.6.3.1.nupkg.sha512",
