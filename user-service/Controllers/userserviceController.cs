@@ -1,6 +1,11 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using user_service.Models;
 
 
@@ -15,15 +20,18 @@ namespace user_service.Controllers
         private readonly SignInManager<UserEntity> _signInManager;
         private readonly ILogger<userserviceController>_logger;
         private readonly IMapper _mapper;
+        private IConfiguration _configuration;
 
-        public userserviceController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager, ILogger<userserviceController> logger, IMapper mapper)
+        public userserviceController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager, ILogger<userserviceController> logger, IMapper mapper, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _mapper = mapper;
+            _configuration = configuration;
         }
         // From Body to prevent passing sensitive info in the url headers
+        [AllowAnonymous]
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register([FromBody] UserDTO userDto)
@@ -54,6 +62,7 @@ namespace user_service.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginUserDTO userDTO)
         {
@@ -70,7 +79,9 @@ namespace user_service.Controllers
                 {
                     return Unauthorized(userDTO);
                 }
-                return Ok(result);
+
+                var token = GenerateToken(userDTO);
+                return Ok(token);
             }
             catch (Exception e)
             {
@@ -78,6 +89,22 @@ namespace user_service.Controllers
                 _logger.LogError(e, $"Error while logging in  user {userDTO.Email}");
                 return Problem($"Error while logging in  user {userDTO.Email}",statusCode:500);
             }
+        }
+
+        private string GenerateToken(LoginUserDTO userDTO)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.Email, userDTO.Email),
+                
+
+
+            };
+            var token = new JwtSecurityToken(_configuration["JwtIssuer"], _configuration["JwtAudience"], claims,expires: DateTime.Now.AddMinutes(25),signingCredentials:credentials);
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
 

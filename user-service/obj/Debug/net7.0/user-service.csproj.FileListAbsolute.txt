@@ -666,3 +666,4 @@
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/obj/Debug/net7.0/ref/user-service.dll
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/AutoMapper.dll
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
