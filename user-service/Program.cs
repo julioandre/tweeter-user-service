@@ -1,6 +1,10 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using user_service.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using user_service.Cache;
 using user_service.Models;
 
 
@@ -9,7 +13,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<ICacheService, CacheService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration.GetSection("Jwt")["Issuer"],
+        ValidAudience = builder.Configuration.GetSection("Jwt")["Audience"],
+        IssuerSigningKey =
+            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("Jwt")["Key"]))
+
+    };
+});
 builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
@@ -23,7 +43,7 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     
-        options.Configuration = "localhost:6379";
+        options.Configuration = "localhost:6378";
         options.InstanceName = "user-redis-cache";
    
 });
