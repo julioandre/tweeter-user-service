@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using StackExchange.Redis;
 using user_service.Config;
+using user_service.Models;
 
 namespace user_service.Cache;
 
@@ -15,20 +16,24 @@ public class CacheService:ICacheService
     private void ConfigureRedis() {
         _db = ConnectionHelper.Connection.GetDatabase();
     }
-    public T GetData<T>(string key)
+    public UserEntity GetData<UserEntity>(string key)
     {
         var value = _db.StringGet(key);
         if (!string.IsNullOrEmpty(value)) {
-            return JsonConvert.DeserializeObject <T> (value);
+            return JsonConvert.DeserializeObject <UserEntity> (value);
         }
         return default;
     }
 
-    public bool SetData<T>(string key, T value, DateTimeOffset expirationTime)
+    public bool SetData<UserEntity>(string key, UserEntity value, TimeSpan expirationTime)
     {
-        TimeSpan expiryTime = expirationTime.DateTime.Subtract(DateTime.Now);
-        var isSet = _db.StringSet(key, JsonConvert.SerializeObject(value), expiryTime);
-        return isSet;
+        if (CheckData(key) == true)
+        {
+            var isSet = _db.StringSet(key, JsonConvert.SerializeObject(value), expirationTime);
+            return isSet; 
+        }
+        return false;
+     
     }
 
     public object RemoveData(string key)
@@ -38,5 +43,11 @@ public class CacheService:ICacheService
             return _db.KeyDelete(key);
         }
         return false;
+    }
+
+    public bool CheckData(string key)
+    {
+        var _data = _db.StringGet(key);
+        return _data.IsNullOrEmpty;
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using user_service.Cache;
 using user_service.Data;
 using user_service.Models;
 
@@ -23,8 +24,9 @@ namespace user_service.Controllers
         private readonly IMapper _mapper;
         private IConfiguration _configuration;
         private ApplicationDbContext _dbContext;
+        private ICacheService _cacheService;
 
-        public userserviceController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager, ILogger<userserviceController> logger, IMapper mapper, IConfiguration configuration, ApplicationDbContext dbContext)
+        public userserviceController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager, ILogger<userserviceController> logger, IMapper mapper, IConfiguration configuration, ApplicationDbContext dbContext, ICacheService cacheService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -32,6 +34,7 @@ namespace user_service.Controllers
             _mapper = mapper;
             _configuration = configuration;
             _dbContext = dbContext;
+            _cacheService = cacheService;
         }
         // From Body to prevent passing sensitive info in the url headers
         [AllowAnonymous]
@@ -54,6 +57,7 @@ namespace user_service.Controllers
                 {
                     return BadRequest(result.Errors);
                 }
+               
                 return Ok(result);
             }
             catch (Exception e)
@@ -116,7 +120,37 @@ namespace user_service.Controllers
 
         private UserEntity GetUser(string username)
         {
-           return _dbContext.Users.FirstOrDefault(u=>u.UserName == username);
+            UserEntity user;
+            try
+            {
+                user = _cacheService.GetData<UserEntity>(username);
+                if (user != null)
+                {
+                    return user;
+                }
+                
+            }
+            catch (Exception exception)
+            {
+                
+            }
+            user = _dbContext.Users.FirstOrDefault(u => u.UserName == username);
+            
+           if (user != null)
+           {
+               try
+               {
+                   _cacheService.SetData(user.UserName, user, TimeSpan.FromDays(2));
+               }
+               catch (Exception e)
+               {
+                   
+               }
+              
+
+           }
+
+           return user;
         }
 
 

@@ -18,7 +18,7 @@ public interface ICacheService
     /// <param name="value"></param>
     /// <param name="expirationTime"></param>
     /// <returns></returns>
-    bool SetData<T>(string key, T value, DateTimeOffset expirationTime);
+    bool SetData<T>(string key, T value, TimeSpan expirationTime);
 
     /// <summary>
     /// Remove Data
