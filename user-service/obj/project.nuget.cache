@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o9udZh2pYp7CV2Katv6D2q8TNv7p5eR+nRV5Oc31H7Lk8j44j8Xh9yXzWo3Vj7qH7LUxxrx2KRFG/jva6vremA==",
+  "dgSpecHash": "0JOeB1tfnxvNMMFlQm5u6lpW/snua2EAl17KV7uiidVlsPLuhfcyrJy2BjwyIHzY3EHfQdO9BhGd5ZdxiMaAnQ==",
   "success": true,
   "projectFilePath": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/user-service.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,9 @@
     "/Users/julioandre/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
+    "/Users/julioandre/.nuget/packages/confluent.kafka/2.1.1/confluent.kafka.2.1.1.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/julioandre/.nuget/packages/librdkafka.redist/2.1.1/librdkafka.redist.2.1.1.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.5/microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.5/microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
     "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.5/microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
