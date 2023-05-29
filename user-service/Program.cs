@@ -16,7 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICacheService, CacheService>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IConsumers, Consumers>();
+builder.Services.AddScoped<IHostedService, Consumers>();
 builder.Services.AddScoped<IProducers, Producers>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
