@@ -1,4 +1,7 @@
 using System.Text;
+using KafkaFlow;
+using KafkaFlow.Serializer;
+using KafkaFlow.TypedHandler;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using user_service.Data;
@@ -12,12 +15,24 @@ using user_service.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+const string topicName = "followServiceTopic";
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICacheService, CacheService>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IHostedService, Consumers>();
+builder.Services.AddSingleton<IHostedService, Consumers>();
 builder.Services.AddScoped<IProducers, Producers>();
+//Logging to console
+builder.Services.AddLogging(configure => configure.AddConsole());
+builder.Services.AddKafkaFlowHostedService(kafka => kafka.UseMicrosoftLog().AddCluster(cluster =>
+{
+    cluster.WithBrokers(new[] { "localhost:9092" })
+        .AddConsumer(consumer => consumer.Topic(topicName)
+            .WithGroupId("test-Kafka")
+            .WithBufferSize(100)
+            .WithWorkersCount(3)
+            .WithAutoOffsetReset(AutoOffsetReset.Earliest)
+            .AddMiddlewares(middleware => middleware.AddSerializer<JsonCoreSerializer>()));
+}));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {

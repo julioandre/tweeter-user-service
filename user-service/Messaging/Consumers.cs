@@ -8,11 +8,11 @@ namespace user_service.Messaging;
 
 public class Consumers:IHostedService
 {
-    private readonly string bootstrapServers = "localhost:9092";
+    private readonly string bootstrapServers = "127.0.0.1:9092";
     private IUserService _userService;
     private IProducers _producers;
-    private IServiceProvider _serviceProvider;
-    public Consumers(IServiceProvider serviceProvider)
+    private IServiceScopeFactory _serviceProvider;
+    public Consumers(IServiceScopeFactory serviceProvider)
     {
         _serviceProvider = serviceProvider;
 
@@ -33,12 +33,14 @@ public class Consumers:IHostedService
                 var cancelToken = new CancellationTokenSource();
                 try
                 {
-                    while (true)
+                    while (!cancelToken.IsCancellationRequested)
                     {
+                        Console.WriteLine("Starting to Consume");
                         var consumer = consumerBuilder.Consume(cancelToken.Token);
                         var orderRequest = JsonConvert.DeserializeObject<string>(consumer.Message.Value);
-                        var userEntity = _userService.GetUser(orderRequest);
-                        Debug.WriteLine("Sending ID to followService" + userEntity.Id);
+                        Console.WriteLine("Consuming");
+                        //var userEntity = _userService.GetUser(orderRequest);
+                        Console.WriteLine("Sending ID to followService" + orderRequest);
                     }
                 }catch (OperationCanceledException) {
                     consumerBuilder.Close();
