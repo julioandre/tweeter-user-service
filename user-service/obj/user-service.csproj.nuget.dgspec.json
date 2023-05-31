@@ -43,6 +43,42 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "KafkaFlow": {
+              "target": "Package",
+              "version": "[2.3.0-beta.1, )"
+            },
+            "KafkaFlow.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[2.3.0-beta.1, )"
+            },
+            "KafkaFlow.LogHandler.Console": {
+              "target": "Package",
+              "version": "[2.3.0-beta.1, )"
+            },
+            "KafkaFlow.LogHandler.Microsoft": {
+              "target": "Package",
+              "version": "[2.2.16, )"
+            },
+            "KafkaFlow.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.3.0-beta.1, )"
+            },
+            "KafkaFlow.Serializer": {
+              "target": "Package",
+              "version": "[2.3.0-beta.1, )"
+            },
+            "KafkaFlow.Serializer.JsonCore": {
+              "target": "Package",
+              "version": "[2.3.0-beta.1, )"
+            },
+            "KafkaFlow.TypedHandler": {
+              "target": "Package",
+              "version": "[2.3.0-beta.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.5, )"

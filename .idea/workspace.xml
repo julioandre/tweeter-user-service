@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9aa6ac-a748-42e3-b2d0-02515e3d5814" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vs/user-service/xs/UserPrefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/user-service/xs/UserPrefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +21,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "adding__cache&&Jwt",
-    "last_opened_file_path": "/Users/julioandre/RiderProjects/tweeter-clone/user-service"
+    "git-widget-placeholder": "Adding__Kafka",
+    "last_opened_file_path": "/Users/julioandre/RiderProjects/tweeter-clone/user-service",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager">

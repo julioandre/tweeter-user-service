@@ -9,9 +9,9 @@ using Microsoft.IdentityModel.Tokens;
 using user_service.Cache;
 using user_service.Data;
 using user_service.Models;
+using user_service.Services;
 
 
-/// Remove email frrom errors
 namespace user_service.Controllers
 {
     [Route("api/[controller]")]
@@ -23,10 +23,11 @@ namespace user_service.Controllers
         private readonly ILogger<userserviceController>_logger;
         private readonly IMapper _mapper;
         private IConfiguration _configuration;
+        private IUserService _userService;
         private ApplicationDbContext _dbContext;
         private ICacheService _cacheService;
 
-        public userserviceController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager, ILogger<userserviceController> logger, IMapper mapper, IConfiguration configuration, ApplicationDbContext dbContext, ICacheService cacheService)
+        public userserviceController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager, ILogger<userserviceController> logger, IMapper mapper, IUserService userService,IConfiguration configuration, ApplicationDbContext dbContext, ICacheService cacheService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -34,6 +35,7 @@ namespace user_service.Controllers
             _mapper = mapper;
             _configuration = configuration;
             _dbContext = dbContext;
+            _userService = userService;
             _cacheService = cacheService;
         }
         // From Body to prevent passing sensitive info in the url headers
@@ -87,7 +89,7 @@ namespace user_service.Controllers
                     return Unauthorized(userDTO);
                 }
 
-                var user = GetUser(userDTO.Email);
+                var user = _userService.GetUser(userDTO.Email,includeCache:true);
                 var token = GenerateToken(user);
                 return Ok(token);
             }
@@ -118,40 +120,44 @@ namespace user_service.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private UserEntity GetUser(string username)
-        {
-            UserEntity user;
-            try
-            {
-                user = _cacheService.GetData<UserEntity>(username);
-                if (user != null)
-                {
-                    return user;
-                }
-                
-            }
-            catch (Exception exception)
-            {
-                
-            }
-            user = _dbContext.Users.FirstOrDefault(u => u.UserName == username);
-            
-           if (user != null)
-           {
-               try
-               {
-                   _cacheService.SetData(user.UserName, user, TimeSpan.FromDays(2));
-               }
-               catch (Exception e)
-               {
-                   
-               }
-              
-
-           }
-
-           return user;
-        }
+        // private UserEntity GetUser(string username, bool includeCache=false)
+        // {
+        //     UserEntity user;
+        //     if (includeCache)
+        //     {
+        //         try
+        //         {
+        //             user = _cacheService.GetData<UserEntity>(username);
+        //             if (user != null)
+        //             {
+        //                 return user;
+        //             }
+        //         
+        //         }
+        //         catch (Exception exception)
+        //         {
+        //         
+        //         }
+        //     }
+        //    
+        //     user = _dbContext.Users.FirstOrDefault(u => u.UserName == username);
+        //     
+        //    if (user != null)
+        //    {
+        //        try
+        //        {
+        //            _cacheService.SetData(user.UserName, user, TimeSpan.FromDays(2));
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            
+        //        }
+        //       
+        //
+        //    }
+        //
+        //    return user;
+        // }
 
 
 

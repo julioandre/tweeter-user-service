@@ -75,6 +75,23 @@
           }
         }
       },
+      "Confluent.Kafka/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.0",
+          "librdkafka.redist": "2.1.1"
+        },
+        "compile": {
+          "lib/net6.0/Confluent.Kafka.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Confluent.Kafka.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -85,6 +102,266 @@
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow/2.3.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "Confluent.Kafka": "1.7.0",
+          "KafkaFlow.Abstractions": "2.3.0-beta.1",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.Abstractions/2.3.0-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.Extensions.Hosting/2.3.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "KafkaFlow": "2.3.0-beta.1",
+          "KafkaFlow.Microsoft.DependencyInjection": "2.3.0-beta.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "3.1.17"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.LogHandler.Console/2.3.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "KafkaFlow.Abstractions": "2.3.0-beta.1",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.LogHandler.Console.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.LogHandler.Console.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.LogHandler.Microsoft/2.2.16": {
+        "type": "package",
+        "dependencies": {
+          "KafkaFlow.Abstractions": "2.2.16",
+          "Microsoft.Extensions.Logging": "3.1.17",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.LogHandler.Microsoft.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.LogHandler.Microsoft.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.Microsoft.DependencyInjection/2.3.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "KafkaFlow": "2.3.0-beta.1",
+          "KafkaFlow.Abstractions": "2.3.0-beta.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.17"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.Microsoft.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.Microsoft.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.Serializer/2.3.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "KafkaFlow.Abstractions": "2.3.0-beta.1",
+          "Microsoft.IO.RecyclableMemoryStream": "2.1.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.Serializer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.Serializer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.Serializer.JsonCore/2.3.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "KafkaFlow.Abstractions": "2.3.0-beta.1",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.Serializer.JsonCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.Serializer.JsonCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "KafkaFlow.TypedHandler/2.3.0-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "KafkaFlow.Abstractions": "2.3.0-beta.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/KafkaFlow.TypedHandler.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/KafkaFlow.TypedHandler.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "librdkafka.redist/2.1.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/librdkafka.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-x64/native/alpine-librdkafka.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/centos6-librdkafka.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/centos7-librdkafka.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/librdkafka.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/librdkafka.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/librdkafka.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/libcrypto-3-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libcurl.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/librdkafka.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/librdkafkacpp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libssl-3-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/msvcp140.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/vcruntime140.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/zlib1.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/zstd.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libcrypto-3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libcurl.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/librdkafka.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/librdkafkacpp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libssl-3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/msvcp140.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/vcruntime140.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/zlib1.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/zstd.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
           }
         }
       },
@@ -1539,6 +1816,25 @@
           "buildMultiTargeting/_._": {}
         }
       },
+      "Microsoft.Extensions.Hosting.Abstractions/3.1.17": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.17",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.17",
+          "Microsoft.Extensions.FileProviders.Abstractions": "3.1.17",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.17"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Identity.Core/7.0.5": {
         "type": "package",
         "dependencies": {
@@ -1777,6 +2073,19 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IO.RecyclableMemoryStream/2.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.IO.RecyclableMemoryStream.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.IO.RecyclableMemoryStream.dll": {
             "related": ".xml"
           }
         }
@@ -4134,6 +4443,19 @@
           "lib/netstandard1.3/System.Threading.dll": {}
         }
       },
+      "System.Threading.Channels/4.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Threading.Tasks/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4264,6 +4586,25 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "Confluent.Kafka/2.1.1": {
+      "sha512": "mXFB78iSv3jNNHYCUO3EtDzYlg464m306PBFCiiKARcwCL3A+Zc8DsyioS3MOu47Sm2uBOgazeSbk2707rz+DQ==",
+      "type": "package",
+      "path": "confluent.kafka/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "confluent.kafka.2.1.1.nupkg.sha512",
+        "confluent.kafka.nuspec",
+        "lib/net462/Confluent.Kafka.dll",
+        "lib/net462/Confluent.Kafka.xml",
+        "lib/net6.0/Confluent.Kafka.dll",
+        "lib/net6.0/Confluent.Kafka.xml",
+        "lib/netstandard1.3/Confluent.Kafka.dll",
+        "lib/netstandard1.3/Confluent.Kafka.xml",
+        "lib/netstandard2.0/Confluent.Kafka.dll",
+        "lib/netstandard2.0/Confluent.Kafka.xml"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -4280,6 +4621,171 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "KafkaFlow/2.3.0-beta.1": {
+      "sha512": "LVeIXYhsNTIPDC3wriK+gS/5Y21PIvN0fHDlYpOVa7LOksRP/N63tGjH+Q4t43FPTR4ZUV940O7R6HsQ3qqQtQ==",
+      "type": "package",
+      "path": "kafkaflow/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.nuspec",
+        "lib/netstandard2.0/KafkaFlow.dll",
+        "lib/netstandard2.0/KafkaFlow.xml"
+      ]
+    },
+    "KafkaFlow.Abstractions/2.3.0-beta.1": {
+      "sha512": "VCKrB++K71CTeDxrf6WCJPj+9hco5V6iZIz6ywO5HQ4XSTwHvq+CxAeygywarkHyvdMoX/LaYW1mGJWVRZaUqg==",
+      "type": "package",
+      "path": "kafkaflow.abstractions/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.abstractions.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.abstractions.nuspec",
+        "lib/netstandard2.0/KafkaFlow.Abstractions.dll",
+        "lib/netstandard2.0/KafkaFlow.Abstractions.xml"
+      ]
+    },
+    "KafkaFlow.Extensions.Hosting/2.3.0-beta.1": {
+      "sha512": "/0srWIvgb/CAFN/WRXOsBq5YNx0XJ9k8umVuLvkKFvX7OWQyTnc1zn3MwP5jn4lRU8AD78HuucsuTbs2uBD41Q==",
+      "type": "package",
+      "path": "kafkaflow.extensions.hosting/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.extensions.hosting.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.extensions.hosting.nuspec",
+        "lib/netstandard2.0/KafkaFlow.Extensions.Hosting.dll",
+        "lib/netstandard2.0/KafkaFlow.Extensions.Hosting.xml"
+      ]
+    },
+    "KafkaFlow.LogHandler.Console/2.3.0-beta.1": {
+      "sha512": "rSnYBIJ7gOG9smgzeU6hfAquIHB2u3oOq9WlXcrYYPypFuv3aMwFE15F63C2hBlFrVzcykKuC0p944J2CF9bNw==",
+      "type": "package",
+      "path": "kafkaflow.loghandler.console/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.loghandler.console.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.loghandler.console.nuspec",
+        "lib/netstandard2.0/KafkaFlow.LogHandler.Console.dll",
+        "lib/netstandard2.0/KafkaFlow.LogHandler.Console.xml"
+      ]
+    },
+    "KafkaFlow.LogHandler.Microsoft/2.2.16": {
+      "sha512": "AxR6T4rrFgFjTzYcmEoe2qHR7EKIjhSAm1xY5aL51uBYXizeKbngHWPScYQdXtvDikOG2WV7f1fKM4zW4S7nqg==",
+      "type": "package",
+      "path": "kafkaflow.loghandler.microsoft/2.2.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.loghandler.microsoft.2.2.16.nupkg.sha512",
+        "kafkaflow.loghandler.microsoft.nuspec",
+        "lib/netstandard2.0/KafkaFlow.LogHandler.Microsoft.dll",
+        "lib/netstandard2.0/KafkaFlow.LogHandler.Microsoft.xml"
+      ]
+    },
+    "KafkaFlow.Microsoft.DependencyInjection/2.3.0-beta.1": {
+      "sha512": "rUZMXOciii4UL/kEHLFabbP9p12ByfYZs7eRTNsOl9fdrxz4tnNplsl/6PkKkOYU85F0mdLm21rYxowDoLGKBA==",
+      "type": "package",
+      "path": "kafkaflow.microsoft.dependencyinjection/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.microsoft.dependencyinjection.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.microsoft.dependencyinjection.nuspec",
+        "lib/netstandard2.0/KafkaFlow.Microsoft.DependencyInjection.dll",
+        "lib/netstandard2.0/KafkaFlow.Microsoft.DependencyInjection.xml"
+      ]
+    },
+    "KafkaFlow.Serializer/2.3.0-beta.1": {
+      "sha512": "gaAcGXg2roC5aytOnOVfx2EWMe34ful4zPd2dJoFQFqOJqHEnobFVBq+p3wVhabVzUDPfDda5Cv7Hx3fb9KA8g==",
+      "type": "package",
+      "path": "kafkaflow.serializer/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.serializer.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.serializer.nuspec",
+        "lib/netstandard2.0/KafkaFlow.Serializer.dll",
+        "lib/netstandard2.0/KafkaFlow.Serializer.xml"
+      ]
+    },
+    "KafkaFlow.Serializer.JsonCore/2.3.0-beta.1": {
+      "sha512": "r3mJ6lUYWIYi2xwjOBSvQwAZPOmpTEgUPNOsqLqvMTxFLNT9XQG2/YmYPijmectSHQTr1JMhaDzfvXHObCPtOQ==",
+      "type": "package",
+      "path": "kafkaflow.serializer.jsoncore/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.serializer.jsoncore.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.serializer.jsoncore.nuspec",
+        "lib/netstandard2.0/KafkaFlow.Serializer.JsonCore.dll",
+        "lib/netstandard2.0/KafkaFlow.Serializer.JsonCore.xml"
+      ]
+    },
+    "KafkaFlow.TypedHandler/2.3.0-beta.1": {
+      "sha512": "MnVuqMGoWwJt+N4ChLHXpW7aus7fTvFvcb2Z0qYkOL+iU3KBLRjdxVS+SOr2pldrmAImn0uh0u38k8SOxvw9Ow==",
+      "type": "package",
+      "path": "kafkaflow.typedhandler/2.3.0-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kafkaflow.typedhandler.2.3.0-beta.1.nupkg.sha512",
+        "kafkaflow.typedhandler.nuspec",
+        "lib/netstandard2.0/KafkaFlow.TypedHandler.dll",
+        "lib/netstandard2.0/KafkaFlow.TypedHandler.xml"
+      ]
+    },
+    "librdkafka.redist/2.1.1": {
+      "sha512": "LDExIZlVbBez9mOcqiGGSNj6Jv9OYppifAI4FN14tT+swBRbxsnvJOemz3ZWyZOzbuqhtZmVhjem79Q8z8cWiA==",
+      "type": "package",
+      "path": "librdkafka.redist/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CONFIGURATION.md",
+        "LICENSES.txt",
+        "README.md",
+        "build/librdkafka.redist.props",
+        "build/native/include/librdkafka/rdkafka.h",
+        "build/native/include/librdkafka/rdkafka_mock.h",
+        "build/native/include/librdkafka/rdkafkacpp.h",
+        "build/native/lib/win/x64/win-x64-Release/v142/librdkafka.lib",
+        "build/native/lib/win/x64/win-x64-Release/v142/librdkafkacpp.lib",
+        "build/native/lib/win/x86/win-x86-Release/v142/librdkafka.lib",
+        "build/native/lib/win/x86/win-x86-Release/v142/librdkafkacpp.lib",
+        "build/native/librdkafka.redist.targets",
+        "librdkafka.redist.2.1.1.nupkg.sha512",
+        "librdkafka.redist.nuspec",
+        "runtimes/linux-arm64/native/librdkafka.so",
+        "runtimes/linux-x64/native/alpine-librdkafka.so",
+        "runtimes/linux-x64/native/centos6-librdkafka.so",
+        "runtimes/linux-x64/native/centos7-librdkafka.so",
+        "runtimes/linux-x64/native/librdkafka.so",
+        "runtimes/osx-arm64/native/librdkafka.dylib",
+        "runtimes/osx-x64/native/librdkafka.dylib",
+        "runtimes/win-x64/native/libcrypto-3-x64.dll",
+        "runtimes/win-x64/native/libcurl.dll",
+        "runtimes/win-x64/native/librdkafka.dll",
+        "runtimes/win-x64/native/librdkafkacpp.dll",
+        "runtimes/win-x64/native/libssl-3-x64.dll",
+        "runtimes/win-x64/native/msvcp140.dll",
+        "runtimes/win-x64/native/vcruntime140.dll",
+        "runtimes/win-x64/native/zlib1.dll",
+        "runtimes/win-x64/native/zstd.dll",
+        "runtimes/win-x86/native/libcrypto-3.dll",
+        "runtimes/win-x86/native/libcurl.dll",
+        "runtimes/win-x86/native/librdkafka.dll",
+        "runtimes/win-x86/native/librdkafkacpp.dll",
+        "runtimes/win-x86/native/libssl-3.dll",
+        "runtimes/win-x86/native/msvcp140.dll",
+        "runtimes/win-x86/native/vcruntime140.dll",
+        "runtimes/win-x86/native/zlib1.dll",
+        "runtimes/win-x86/native/zstd.dll"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.5": {
@@ -6265,6 +6771,22 @@
         "tasks/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
       ]
     },
+    "Microsoft.Extensions.Hosting.Abstractions/3.1.17": {
+      "sha512": "KmhXvv//GsUdP6Albu8gW+zBlOMuYZqVlMvZnU2V0E48bbF9ABp+mTWYEUj6vKZl0rOZFzEth20gF0yn/hq1VA==",
+      "type": "package",
+      "path": "microsoft.extensions.hosting.abstractions/3.1.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.xml",
+        "microsoft.extensions.hosting.abstractions.3.1.17.nupkg.sha512",
+        "microsoft.extensions.hosting.abstractions.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Identity.Core/7.0.5": {
       "sha512": "3fK2nd/3pJaT6jHNhwbSQS19Xxb4D3nsMrj0Vhag/rGk3GwVZusSWbtpnP2Li9Jl6BcJrRP+7M3jCmyVUYloeQ==",
       "type": "package",
@@ -6649,6 +7171,27 @@
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
         "microsoft.identitymodel.tokens.6.30.1.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
+      ]
+    },
+    "Microsoft.IO.RecyclableMemoryStream/2.1.3": {
+      "sha512": "h1hjJ7E0ZMTbutiUXmv07rs+cTST9+w+iDNZginmArfZr47GjHevwBQK/LBcAkHm+w+IHaBd9Lsuf5dv8DnDAg==",
+      "type": "package",
+      "path": "microsoft.io.recyclablememorystream/2.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Microsoft.IO.RecyclableMemoryStream.dll",
+        "lib/net462/Microsoft.IO.RecyclableMemoryStream.xml",
+        "lib/net5.0/Microsoft.IO.RecyclableMemoryStream.dll",
+        "lib/net5.0/Microsoft.IO.RecyclableMemoryStream.xml",
+        "lib/netcoreapp2.1/Microsoft.IO.RecyclableMemoryStream.dll",
+        "lib/netcoreapp2.1/Microsoft.IO.RecyclableMemoryStream.xml",
+        "lib/netstandard2.0/Microsoft.IO.RecyclableMemoryStream.dll",
+        "lib/netstandard2.0/Microsoft.IO.RecyclableMemoryStream.xml",
+        "lib/netstandard2.1/Microsoft.IO.RecyclableMemoryStream.dll",
+        "lib/netstandard2.1/Microsoft.IO.RecyclableMemoryStream.xml",
+        "microsoft.io.recyclablememorystream.2.1.3.nupkg.sha512",
+        "microsoft.io.recyclablememorystream.nuspec"
       ]
     },
     "Microsoft.NET.StringTools/17.3.2": {
@@ -11017,6 +11560,30 @@
         "system.threading.nuspec"
       ]
     },
+    "System.Threading.Channels/4.7.1": {
+      "sha512": "6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "type": "package",
+      "path": "system.threading.channels/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Threading.Channels.dll",
+        "lib/net461/System.Threading.Channels.xml",
+        "lib/netcoreapp3.0/System.Threading.Channels.dll",
+        "lib/netcoreapp3.0/System.Threading.Channels.xml",
+        "lib/netstandard1.3/System.Threading.Channels.dll",
+        "lib/netstandard1.3/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "system.threading.channels.4.7.1.nupkg.sha512",
+        "system.threading.channels.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Threading.Tasks/4.3.0": {
       "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "type": "package",
@@ -11174,6 +11741,15 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Confluent.Kafka >= 2.1.1",
+      "KafkaFlow >= 2.3.0-beta.1",
+      "KafkaFlow.Extensions.Hosting >= 2.3.0-beta.1",
+      "KafkaFlow.LogHandler.Console >= 2.3.0-beta.1",
+      "KafkaFlow.LogHandler.Microsoft >= 2.2.16",
+      "KafkaFlow.Microsoft.DependencyInjection >= 2.3.0-beta.1",
+      "KafkaFlow.Serializer >= 2.3.0-beta.1",
+      "KafkaFlow.Serializer.JsonCore >= 2.3.0-beta.1",
+      "KafkaFlow.TypedHandler >= 2.3.0-beta.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.5",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.5",
@@ -11233,6 +11809,42 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "Confluent.Kafka": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
+          "KafkaFlow": {
+            "target": "Package",
+            "version": "[2.3.0-beta.1, )"
+          },
+          "KafkaFlow.Extensions.Hosting": {
+            "target": "Package",
+            "version": "[2.3.0-beta.1, )"
+          },
+          "KafkaFlow.LogHandler.Console": {
+            "target": "Package",
+            "version": "[2.3.0-beta.1, )"
+          },
+          "KafkaFlow.LogHandler.Microsoft": {
+            "target": "Package",
+            "version": "[2.2.16, )"
+          },
+          "KafkaFlow.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[2.3.0-beta.1, )"
+          },
+          "KafkaFlow.Serializer": {
+            "target": "Package",
+            "version": "[2.3.0-beta.1, )"
+          },
+          "KafkaFlow.Serializer.JsonCore": {
+            "target": "Package",
+            "version": "[2.3.0-beta.1, )"
+          },
+          "KafkaFlow.TypedHandler": {
+            "target": "Package",
+            "version": "[2.3.0-beta.1, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
