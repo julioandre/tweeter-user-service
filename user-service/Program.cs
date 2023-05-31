@@ -20,7 +20,8 @@ const string topicName = "followServiceTopic";
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICacheService, CacheService>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddSingleton<IHostedService, Consumers>();
+builder.Services.AddScoped<ITaskHandler, TaskHandler1>();
+builder.Services.AddHostedService<Consumers>();
 builder.Services.AddScoped<IProducers, Producers>();
 //Logging to console
 builder.Services.AddLogging(configure => configure.AddConsole());
