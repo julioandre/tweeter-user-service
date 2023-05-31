@@ -1,13 +1,11 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR "/src"
 COPY ["user-service.csproj", "./"]
 RUN dotnet restore "user-service.csproj"
-COPY . .
+COPY . ./
 WORKDIR "/src"
 RUN dotnet build "user-service.csproj" -c Release -o /app/build
 

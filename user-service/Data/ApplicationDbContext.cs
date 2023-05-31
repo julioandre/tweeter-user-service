@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using user_service.Models;
 
+
 namespace user_service.Data;
 
 public class ApplicationDbContext:IdentityDbContext<UserEntity>
@@ -19,6 +20,8 @@ public class ApplicationDbContext:IdentityDbContext<UserEntity>
     }
 
     public DbSet<UserEntity> Users{get;set;}
+
+   
 }
 
 public class UserEntityConfiguration:IEntityTypeConfiguration<UserEntity>

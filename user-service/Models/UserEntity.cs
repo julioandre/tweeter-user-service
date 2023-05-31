@@ -7,8 +7,9 @@ public class UserEntity:IdentityUser
    
     public string FirstName { get; set; }
     public string LastName { get; set; }
+    public string Email { get; set; }
     
     public DateTime CreationDate { get; set; } = DateTime.Now;
-    public DateTime? LaginDate { get; set; } = DateTime.Now;
+    public DateTime? LoginDate { get; set; } = DateTime.Now;
    
 }

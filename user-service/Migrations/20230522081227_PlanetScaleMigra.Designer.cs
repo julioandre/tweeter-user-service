@@ -12,8 +12,8 @@ using user_service.Data;
 namespace user_service.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230502132429_Migrations_Identity")]
-    partial class Migrations_Identity
+    [Migration("20230522081227_PlanetScaleMigra")]
+    partial class PlanetScaleMigra
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -174,7 +174,11 @@ namespace user_service.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -196,6 +200,9 @@ namespace user_service.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<DateTime?>("LoginDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
