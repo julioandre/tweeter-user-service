@@ -22,7 +22,7 @@ public class Consumers:IHostedService
         using var scope = _serviceProvider.CreateScope();
         // For scoped services error
         _userService = scope.ServiceProvider.GetRequiredService<IUserService>();
-        string topic = "followTopic";
+        string topic = "followServiceTopic2";
         string groupId = "test_group";
         var config = new ConsumerConfig {GroupId = groupId, BootstrapServers = bootstrapServers, AutoOffsetReset = AutoOffsetReset.Earliest};
         try

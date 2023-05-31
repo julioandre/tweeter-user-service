@@ -10,6 +10,7 @@ using user_service.Cache;
 using user_service.Messaging;
 using user_service.Models;
 using user_service.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,16 +24,20 @@ builder.Services.AddSingleton<IHostedService, Consumers>();
 builder.Services.AddScoped<IProducers, Producers>();
 //Logging to console
 builder.Services.AddLogging(configure => configure.AddConsole());
-builder.Services.AddKafkaFlowHostedService(kafka => kafka.UseMicrosoftLog().AddCluster(cluster =>
-{
-    cluster.WithBrokers(new[] { "localhost:9092" })
-        .AddConsumer(consumer => consumer.Topic(topicName)
-            .WithGroupId("test-Kafka")
-            .WithBufferSize(100)
-            .WithWorkersCount(3)
-            .WithAutoOffsetReset(AutoOffsetReset.Earliest)
-            .AddMiddlewares(middleware => middleware.AddSerializer<JsonCoreSerializer>()));
-}));
+// builder.Services.AddKafkaFlowHostedService(kafka => kafka.UseMicrosoftLog().AddCluster(cluster =>
+// {
+//     cluster.WithBrokers(new[] { "localhost:9092" })
+//         .AddConsumer(consumer => consumer.Topic(topicName)
+//             .WithGroupId("test-Kafka")
+//             .WithBufferSize(100)
+//             .WithWorkersCount(3)
+//             .WithAutoOffsetReset(AutoOffsetReset.Earliest)
+//             .AddMiddlewares(middleware => middleware.AddSerializer<JsonCoreSerializer>().AddTypedHandlers(handlers=> handlers.AddHandler<TaskHandler1>())));
+// }));
+
+// var provider = builder.Services.BuildServiceProvider();
+// var bus = provider.CreateKafkaBus();
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
@@ -87,3 +92,6 @@ app.UseCookiePolicy();
 app.MapControllers();
 app.MapRazorPages();
 app.Run();
+// await bus.StartAsync();
+// Console.WriteLine("Press Key to exit...");
+// Console.ReadKey();
