@@ -69,7 +69,20 @@ namespace user_service.Migrations
                 table: "AspNetUsers",
                 type: "nvarchar(450)",
                 nullable: false);
-                
+            
+            migrationBuilder.AddColumn<DateTime>(
+                name: "CreatedAt",
+                table: "AspNetUsers",
+                type: "datetime2",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+            
+            migrationBuilder.AddColumn<DateTime>(
+                name: "LastLogin",
+                table: "AspNetUsers",
+                type: "datetime2",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<int>(
                 name: "AccessFailedCount",

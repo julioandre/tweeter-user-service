@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tumKDuTk3Fjyu3PpjHuWbLtC5uF69NveSWX++169t6E=",
+  "Hash": "nNIfe9q2r+Vas3ie390nQclWT6pyhJZuOdZ3HNMXE8o=",
   "Source": "user-service",
   "BasePath": "_content/user-service",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "user-service/wwwroot",
       "Source": "user-service",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "Pattern": "**"
     }
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "/Users/julioandre/.nuget/packages/microsoft.aspnetcore.identity.ui/7.0.5/staticwebassets/V5/lib/jquery/LICENSE.txt"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/css/site.css",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/css/site.css",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/favicon.ico",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/favicon.ico",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/js/site.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/js/site.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/bootstrap/LICENSE",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery/dist/jquery.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/lib/jquery/LICENSE.txt",
+      "Identity": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "user-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/julioandre/RiderProjects/user-service/user-service/wwwroot/",
+      "ContentRoot": "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/wwwroot/",
       "BasePath": "_content/user-service",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
