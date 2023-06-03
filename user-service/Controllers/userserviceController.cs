@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using NuGet.Protocol;
 using user_service.Cache;
 using user_service.Data;
 using user_service.Models;
@@ -26,6 +28,7 @@ namespace user_service.Controllers
         private IUserService _userService;
         private ApplicationDbContext _dbContext;
         private ICacheService _cacheService;
+        private static string _jsonfilepath = "/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/DummyData/user_mockData.json";
 
         public userserviceController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager, ILogger<userserviceController> logger, IMapper mapper, IUserService userService,IConfiguration configuration, ApplicationDbContext dbContext, ICacheService cacheService)
         {
@@ -71,10 +74,43 @@ namespace user_service.Controllers
         }
 
         [HttpPost]
+        [Route("registerall")]
+        public async Task<IActionResult> RegisterAll()
+        {
+            var _dummyData = ConvertingJson();
+            //Console.WriteLine(_dummyData[0].ToJson());
+            foreach (var users in _dummyData)
+            {
+                //Console.WriteLine(users);
+                
+                try
+                {
+                    var user = _mapper.Map<UserEntity>(users);
+                    user.UserName = users.Email;
+                    var result = await _userManager.CreateAsync(user, users.Password);
+                    if (!result.Succeeded)
+                    {
+                        Console.WriteLine(result.Errors);
+                    }
+                    
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+           
+            }
+
+            return Ok();
+        }
+
+        [HttpPost, Authorize]
         [AllowAnonymous]
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginUserDTO userDTO)
         {
+            //Getting infor from JWT web token
+            //var userName = User.FindFirstValue(ClaimTypes.NameIdentifier);
             _logger.LogInformation($"Login request for {userDTO.Email}");
             if (!ModelState.IsValid)
             {
@@ -116,8 +152,15 @@ namespace user_service.Controllers
 
 
             };
-            var token = new JwtSecurityToken(_configuration["JwtIssuer"], _configuration["JwtAudience"], claims,expires: DateTime.Now.AddMinutes(25),signingCredentials:credentials);
+            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"], _configuration["Jwt:Audience"], claims,expires: DateTime.Now.AddMinutes(25),signingCredentials:credentials);
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+        public static List<UserDTO> ConvertingJson()
+        {
+            using StreamReader reader = new(_jsonfilepath);
+            var json = reader.ReadToEnd();
+            List<UserDTO> users = JsonConvert.DeserializeObject<List<UserDTO>>(json);
+            return users;
         }
 
         // private UserEntity GetUser(string username, bool includeCache=false)

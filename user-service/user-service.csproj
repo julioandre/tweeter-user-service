@@ -62,6 +62,7 @@
 
     <ItemGroup>
       <Folder Include="Dto\" />
+      <Folder Include="DummyData\" />
       <Folder Include="Migrations\" />
     </ItemGroup>
 

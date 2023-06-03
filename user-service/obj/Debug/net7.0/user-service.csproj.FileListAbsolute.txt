@@ -703,3 +703,4 @@
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/KafkaFlow.Serializer.JsonCore.dll
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/KafkaFlow.TypedHandler.dll
 /Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/Microsoft.IO.RecyclableMemoryStream.dll
+/Users/julioandre/RiderProjects/tweeter-clone/user-service/user-service/bin/Debug/net7.0/DummyData/user_mockData.json
