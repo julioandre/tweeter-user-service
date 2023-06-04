@@ -73,36 +73,36 @@ namespace user_service.Controllers
             }
         }
 
-        [HttpPost]
-        [Route("registerall")]
-        public async Task<IActionResult> RegisterAll()
-        {
-            var _dummyData = ConvertingJson();
-            //Console.WriteLine(_dummyData[0].ToJson());
-            foreach (var users in _dummyData)
-            {
-                //Console.WriteLine(users);
-                
-                try
-                {
-                    var user = _mapper.Map<UserEntity>(users);
-                    user.UserName = users.Email;
-                    var result = await _userManager.CreateAsync(user, users.Password);
-                    if (!result.Succeeded)
-                    {
-                        Console.WriteLine(result.Errors);
-                    }
-                    
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-           
-            }
-
-            return Ok();
-        }
+        // [HttpPost]
+        // [Route("registerall")]
+        // public async Task<IActionResult> RegisterAll()
+        // {
+        //     var _dummyData = ConvertingJson();
+        //     //Console.WriteLine(_dummyData[0].ToJson());
+        //     foreach (var users in _dummyData)
+        //     {
+        //         //Console.WriteLine(users);
+        //         
+        //         try
+        //         {
+        //             var user = _mapper.Map<UserEntity>(users);
+        //             user.UserName = users.Email;
+        //             var result = await _userManager.CreateAsync(user, users.Password);
+        //             if (!result.Succeeded)
+        //             {
+        //                 Console.WriteLine(result.Errors);
+        //             }
+        //             
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Console.WriteLine(ex.Message);
+        //         }
+        //    
+        //     }
+        //
+        //     return Ok();
+        // }
 
         [HttpPost, Authorize]
         [AllowAnonymous]
@@ -162,45 +162,6 @@ namespace user_service.Controllers
             List<UserDTO> users = JsonConvert.DeserializeObject<List<UserDTO>>(json);
             return users;
         }
-
-        // private UserEntity GetUser(string username, bool includeCache=false)
-        // {
-        //     UserEntity user;
-        //     if (includeCache)
-        //     {
-        //         try
-        //         {
-        //             user = _cacheService.GetData<UserEntity>(username);
-        //             if (user != null)
-        //             {
-        //                 return user;
-        //             }
-        //         
-        //         }
-        //         catch (Exception exception)
-        //         {
-        //         
-        //         }
-        //     }
-        //    
-        //     user = _dbContext.Users.FirstOrDefault(u => u.UserName == username);
-        //     
-        //    if (user != null)
-        //    {
-        //        try
-        //        {
-        //            _cacheService.SetData(user.UserName, user, TimeSpan.FromDays(2));
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            
-        //        }
-        //       
-        //
-        //    }
-        //
-        //    return user;
-        // }
 
 
 
