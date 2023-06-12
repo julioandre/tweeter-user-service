@@ -24,14 +24,22 @@ public class TaskHandler1:ITaskHandler
         {
             using (var consumerBuilder = new ConsumerBuilder<Ignore, string>(config).Build())
             {
-                consumerBuilder.Subscribe(topic);
+                try
+                {
+                    consumerBuilder.Subscribe(topic);
+                    Console.WriteLine("Subscribed to Topic");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Couldnt Subscribe"+ ex);
+                }
+               
                 
                 try
                 {
                     while (!stoppingToken.IsCancellationRequested)
                     {
                         Console.WriteLine("Starting to Consume");
-                        await Task.Delay(100,stoppingToken);
                         var consumer = consumerBuilder.Consume(stoppingToken);
                         var orderRequest = JsonConvert.DeserializeObject<string>(consumer.Message.Value);
                         Console.WriteLine("Consuming");

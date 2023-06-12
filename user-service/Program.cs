@@ -1,8 +1,10 @@
 using System.Text;
+using System.Threading.RateLimiting;
 using KafkaFlow;
 using KafkaFlow.Serializer;
 using KafkaFlow.TypedHandler;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using user_service.Data;
 using Microsoft.IdentityModel.Tokens;
@@ -25,21 +27,15 @@ builder.Services.AddHostedService<Consumers>();
 builder.Services.AddScoped<IProducers, Producers>();
 //Logging to console
 builder.Services.AddLogging(configure => configure.AddConsole());
-// builder.Services.AddKafkaFlowHostedService(kafka => kafka.UseMicrosoftLog().AddCluster(cluster =>
-// {
-//     cluster.WithBrokers(new[] { "localhost:9092" })
-//         .AddConsumer(consumer => consumer.Topic(topicName)
-//             .WithGroupId("test-Kafka")
-//             .WithBufferSize(100)
-//             .WithWorkersCount(3)
-//             .WithAutoOffsetReset(AutoOffsetReset.Earliest)
-//             .AddMiddlewares(middleware => middleware.AddSerializer<JsonCoreSerializer>().AddTypedHandlers(handlers=> handlers.AddHandler<TaskHandler1>())));
-// }));
-
-// var provider = builder.Services.BuildServiceProvider();
-// var bus = provider.CreateKafkaBus();
-
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddRateLimiter(_ => _
+    .AddFixedWindowLimiter(policyName: "fixed", options =>
+    {
+        options.PermitLimit = 4;
+        options.Window = TimeSpan.FromSeconds(12);
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        options.QueueLimit = 2;
+    }));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters()
@@ -92,6 +88,11 @@ app.UseAuthorization();
 app.UseCookiePolicy();
 app.MapControllers();
 app.MapRazorPages();
+app.UseRateLimiter();
+static string GetTicks() => (DateTime.Now.Ticks & 0x11111).ToString("00000");
+
+app.MapGet("/", () => Results.Ok($"Hello {GetTicks()}"))
+    .RequireRateLimiting("fixed");
 app.Run();
 // await bus.StartAsync();
 // Console.WriteLine("Press Key to exit...");

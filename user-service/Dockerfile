@@ -1,18 +1,13 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 WORKDIR /app
-
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR "/src"
-COPY ["user-service.csproj", "./"]
-RUN dotnet restore "user-service.csproj"
+# Copy everything
 COPY . ./
-WORKDIR "/src"
-RUN dotnet build "user-service.csproj" -c Release -o /app/build
+# Restore as distinct layers
+RUN dotnet restore
+# Build and publish a release
+RUN dotnet publish -c Release -o out
 
-FROM build AS publish
-RUN dotnet publish "user-service.csproj" -c Release -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "user-service.dll"]
